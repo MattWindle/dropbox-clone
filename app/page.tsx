@@ -2,6 +2,7 @@ import Image from "next/image";
 import { UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { ArrowRight, Cloud, File, Lock, Server } from "lucide-react";
+import Testimonial from "@/components/Testimonial";
 
 export default function Home() {
   return (
@@ -104,6 +105,7 @@ export default function Home() {
         </div>
       </div>
     </div>
+    <Testimonial content="Discover a new era of seamless collaboration with Dropbox! Our user-friendly interface makes file management a breeze, saving you time and boosting productivity. Real-time syncing and commenting features facilitate effortless teamwork, ensuring everyone works on the latest versions. Rest easy with top-notch security measures, and stay connected on-the-go with device compatibility. Elevate your workflow with Dropbox, the essential tool for modern collaboration!" name="Olivia Thompson" location="CEO of Workcation"/>
     </main>
   );
 }
