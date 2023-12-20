@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import { SignIn, SignInButton, SignedOut, UserButton } from "@clerk/nextjs";
+import { SignInButton, SignedOut, UserButton } from "@clerk/nextjs";
 import { ThemeToggle } from "./ThemeToggle";
 
 function Header() {
   return (
-    <header className="flex items-center justify-between">
+    <header className="flex items-center justify-between p-2">
       <Link href="/" className="flex items-center gap-2">
         <div>
           <Image
