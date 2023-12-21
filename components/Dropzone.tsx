@@ -30,6 +30,7 @@ function Dropzone() {
     const uploadPost = async (selectedFile) => {
         if(loading) return;
         if(!user) return;
+        
         isLoading(true)
 
         isLoading(false)
