@@ -14,7 +14,7 @@ export const columns: ColumnDef<FileType>[] = [
         const type = renderValue() as string;
         const extension = type.split("/")[1];
         return(
-            <div>
+            <div className="w-10">
                 <FileIcon
                 extension={extension}
                 // @ts-ignore
@@ -37,18 +37,18 @@ export const columns: ColumnDef<FileType>[] = [
     accessorKey: "size",
     header: "Size",
     cell: ({renderValue, ...props}) => {
-        return (<span>{prettyBytes(renderValue() as number)}</span>;)
+        return (<span>{prettyBytes(renderValue() as number)}</span>)
     }
   },
   {
-    accessorKey: "size",
-    header: "Size",
+    accessorKey: "downloadURL",
+    header: "Link",
     cell: ({renderValue, ...props}) => {
         return (
-            <Link
+            <a
             href={renderValue() as string}
             target="_blank"
-            className="underline text-blue-500 hover:text-blue-500">Download</Link>
+            className="underline text-blue-500 hover:text-blue-500">Download</a>
         )
     }
   },

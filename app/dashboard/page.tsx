@@ -25,9 +25,9 @@ async function Dashboard() {
 
 console.log(skeletonFiles);
 
-  return <div className="pb-64">
+  return <div className="pb-64 container">
     <Dropzone />
-    <section className="container space-y-5">
+    <section className=" space-y-5">
       <h2>All Files</h2>
       <div>
         {/* Table Wrapper */}
