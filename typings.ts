@@ -1,7 +1,7 @@
 export type FileType = {
     userId: string,
     filename: string,
-    fullname: string,
+    fullName: string,
     profileImg: string,
     timestamp: Date,
     type: string,

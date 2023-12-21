@@ -2,8 +2,8 @@
 import { COLOR_EXTENSION_MAP } from "@/constant"
 import { FileType } from "@/typings"
 import { ColumnDef } from "@tanstack/react-table"
-import Link from "next/link"
 import prettyBytes from "pretty-bytes"
+// @ts-ignore
 import { FileIcon, defaultStyles } from 'react-file-icon';
 
 export const columns: ColumnDef<FileType>[] = [
@@ -11,10 +11,12 @@ export const columns: ColumnDef<FileType>[] = [
     accessorKey: "type",
     header: "Type",
     cell: ({renderValue, ...props}) => {
-        const type = renderValue() as string;
+        const type = renderValue();
+        // @ts-ignore
         const extension = type.split("/")[1];
         return(
-            <div className="w-10">
+            <div className="w-12">
+                {/* Creates an icon from the extension value */}
                 <FileIcon
                 extension={extension}
                 // @ts-ignore
@@ -38,6 +40,7 @@ export const columns: ColumnDef<FileType>[] = [
     header: "Size",
     cell: ({renderValue, ...props}) => {
         return (<span>{prettyBytes(renderValue() as number)}</span>)
+        // Puts the size value into prettyBytes which turns it into a prettier number for the frontend
     }
   },
   {
@@ -50,6 +53,7 @@ export const columns: ColumnDef<FileType>[] = [
             target="_blank"
             className="underline text-blue-500 hover:text-blue-500">Download</a>
         )
+        // Creates a link to the file download
     }
   },
 ]
