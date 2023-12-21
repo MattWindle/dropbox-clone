@@ -5,6 +5,7 @@
 - [ShadCN](https://ui.shadcn.com/)
 - [prettyBytes](https://www.npmjs.com/package/pretty-bytes)
 - [React Dropzone](https://react-dropzone.js.org/)
+- [React File Icon](https://www.npmjs.com/package/react-file-icon)
 
 ## Running the project locally
 
